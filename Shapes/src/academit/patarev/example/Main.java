@@ -1,3 +1,7 @@
+package academit.patarev.example;
+
+import academit.patarev.shapes.*;
+
 /**
  * Created by 1 on 10.05.2016.
  */

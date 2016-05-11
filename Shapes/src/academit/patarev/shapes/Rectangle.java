@@ -1,3 +1,5 @@
+package academit.patarev.shapes;
+
 /**
  * Created by 1 on 10.05.2016.
  */
@@ -11,17 +13,14 @@ public class Rectangle extends Shape {
     }
 
     public double getWidth() {
-
         return horizontalSideLength;
     }
 
     public double getHeight() {
-
         return verticalSideLength;
     }
 
     public double getArea() {
-
         return horizontalSideLength * verticalSideLength;
     }
 }
