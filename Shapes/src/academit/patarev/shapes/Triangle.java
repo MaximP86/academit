@@ -28,14 +28,14 @@ public class Triangle extends Shape {
         return Math.max(y1, Math.max(y2, y3)) - Math.min(y1, Math.min(y2, y3));
     }
 
-    public static double getLength(double firstX, double secondX, double firstY, double secondY) {
+    public static double getLength(double firstX, double firstY, double secondX, double secondY) {
         return Math.sqrt(Math.pow((firstX - secondX), 2) + Math.pow((firstY - secondY), 2));
     }
 
     public double getArea() {
-        double sideALength = getLength(x1, x2, y1, y2);
-        double sideBLength = getLength(x2, x3, y2, y3);
-        double sideCLength = getLength(x3, x1, y3, y1);
+        double sideALength = getLength(x1, y1, x2, y2);
+        double sideBLength = getLength(x2, y2, x3, y3);
+        double sideCLength = getLength(x3, y3, x1, y1);
         double halfPerimeter = (sideALength + sideBLength + sideCLength) / 2;
         return Math.sqrt(halfPerimeter * (halfPerimeter - sideALength) * (halfPerimeter - sideBLength) * (halfPerimeter - sideCLength));
     }
