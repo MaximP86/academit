@@ -1,4 +1,4 @@
-package academit.patarev.example;
+package academit.patarev.shapes.example;
 
 import academit.patarev.shapes.*;
 
