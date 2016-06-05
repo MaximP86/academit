@@ -7,8 +7,8 @@ import academit.patarev.range.*;
  */
 public class Main {
     public static void main(String[] args) {
-        Range r1 = new Range(3, 7);
-        System.out.println("Длина диапазона: " + r1.getRangeLength());
-        r1.isInside(4);
+        Range r1 = new Range(3.0, 7.0);
+        System.out.println("Длина диапазона: " + r1.getLength());
+        System.out.println(r1.isInside(2.0));
     }
 }
