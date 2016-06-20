@@ -6,56 +6,46 @@ import java.util.Arrays;
  * Created by 1 on 31.05.2016.
  */
 public class Vector {
-    private double[] a;
+    private double[] array;
 
     public Vector(int n) {
+        array = new double[n];
         if (n <= 0) {
             throw new IllegalArgumentException("Неверная размерность вектора");
         }
-        n = a.length;
-        for (int i = 0; i <= n; ++i) {
-            a[i] = 0;
-        }
     }
 
-    public Vector(Vector copy) {
-        this.a = copy.a;
+    public Vector(double[] b) {
+        array = new double[b.length];
+        for (int i = 0; i < array.length; ++i) {
+            array[i] = b[i];
+        }
     }
 
     public Vector(int n, double[] b) {
-        if (b.length < n) {
-            for (int i = 0; i <= b.length; ++i) {
-                a[i] = b[i];
-            }
-            for (int i = b.length + 1; i <= n; ++i) {
-                a[i] = 0;
-            }
-        }
+        array = new double[n];
         for (int i = 0; i <= n; ++i) {
-            a[i] = b[i];
+            array[i] = b[i];
         }
     }
 
     public int getSize() {
-        return a.length;
+        return array.length;
     }
 
     public String toString() {
-        return Arrays.toString(a);
+        return Arrays.toString(array);
     }
 
-    public double[] getAddition(double[] x, double[] y) {
-        if (x.length > y.length) {
-            double[] c = new double[x.length];
-            for (int i = 0; i <= x.length; ++i) {
-                c[i] = x[i] + y[i];
+    public double[] getAddition(double[] x) {
+        if (x.length > this.array.length) {
+            this.array = new double[x.length];
+            for (int i = 0; i <= x.length - 1; ++i) {
+                this.array[i] = x[i] + this.array[i];
             }
-            return c;
+            return this.array;
+
         }
-        double[] c = new double[y.length];
-        for (int i = 0; i <= y.length; ++i) {
-            c[i] = y[i] + x[i];
-        }
-        return c;
+        return  this.array;
     }
 }
