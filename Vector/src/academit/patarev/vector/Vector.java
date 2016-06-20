@@ -37,15 +37,22 @@ public class Vector {
         return Arrays.toString(array);
     }
 
-    public double[] getAddition(double[] x) {
+    public Vector getAddition(double[] x) {
         if (x.length > this.array.length) {
             this.array = new double[x.length];
             for (int i = 0; i <= x.length - 1; ++i) {
                 this.array[i] = x[i] + this.array[i];
             }
-            return this.array;
+            return this;
 
         }
-        return  this.array;
+        return this;
+    }
+
+    public Vector getMultiplication(double n) {
+        for (int i = 0; i <= this.array.length - 1; ++i) {
+            this.array[i] = this.array[i] * n;
+        }
+        return this;
     }
 }
