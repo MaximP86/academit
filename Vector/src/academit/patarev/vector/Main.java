@@ -10,7 +10,6 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int r = 3;
         double[] a = {2.9, 4.9, 5.9} ;
         double[] b = {3.9, 4.5, 5.7, 7.9} ;
         Vector v1 = new Vector(a);
