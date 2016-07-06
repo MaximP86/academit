@@ -9,23 +9,23 @@ public class Vector {
     private double[] array;
 
     public Vector(int n) {
-        array = new double[n];
-        if (n <= 0) {
+        if (n < 0) {
             throw new IllegalArgumentException("Неверная размерность вектора");
         }
+        array = new double[n];
     }
 
     public Vector(double[] b) {
         array = new double[b.length];
-        for (int i = 0; i < array.length; ++i) {
-            array[i] = b[i];
-        }
+        System.arraycopy(b, 0, this.array, 0, b.length);
     }
 
     public Vector(int n, double[] b) {
         array = new double[n];
-        for (int i = 0; i <= n; ++i) {
-            array[i] = b[i];
+        if (n >= b.length) {
+            System.arraycopy(b, 0, this.array, 0, n);
+        } else {
+            System.arraycopy(b, 0, this.array, 0, b.length);
         }
     }
 
@@ -37,11 +37,15 @@ public class Vector {
         return Arrays.toString(array);
     }
 
-    public Vector getAddition(double[] x) {
+    public Vector add(double[] x) {
         if (x.length > this.array.length) {
+            double[] k = this.array;
             this.array = new double[x.length];
-            for (int i = 0; i <= x.length - 1; ++i) {
-                this.array[i] = x[i] + this.array[i];
+            System.arraycopy(this.array, 0, k, 0, x.length);
+
+
+            for (int i = 0; i <= k.length - 1; ++i) {
+                this.array[i] = x[i] + k[i];
             }
             return this;
 
@@ -49,7 +53,7 @@ public class Vector {
         return this;
     }
 
-    public Vector getMultiplication(double n) {
+    public Vector Multiply(double n) {
         for (int i = 0; i <= this.array.length - 1; ++i) {
             this.array[i] = this.array[i] * n;
         }

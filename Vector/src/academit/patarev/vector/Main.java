@@ -17,7 +17,7 @@ public class Main {
         Vector v2 = new Vector(c);
         System.out.println(v1.getSize());
         System.out.println(v1.toString());
-        System.out.println((v1.getAddition(b)).toString());
-        System.out.println((v2.getMultiplication(2.5)).toString());
+        System.out.println((v1.add(b)).toString());
+        System.out.println((v2.Multiply(2.5)).toString());
     }
 }

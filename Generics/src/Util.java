@@ -3,6 +3,9 @@
  */
 public class Util {
     public static <K, V> boolean compare(Pair<K, V> p1, Pair<K, V> p2) {
-        return p1.getX().equals(p2.getX()) && p1.getY().equals(p2.getY());
+        return p1.getFirst().equals(p2.getFirst()) && p1.getSecond().equals(p2.getSecond());
+        if (p1 == null && p2 == null) {
+            return ;
+        }
     }
 }
