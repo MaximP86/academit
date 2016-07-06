@@ -2,9 +2,6 @@
  * Created by 1 on 05.07.2016.
  */
 public class Converter {
-    private double celsius;
-    private double fahrenheit;
-    private double kelvin;
 
     public double getCelsiusToFahrenheit(double celsius) {
         return (celsius * 1.8) + 32;
