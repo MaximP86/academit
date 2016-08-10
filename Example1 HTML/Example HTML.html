@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    </style>
+    <link rel="stylesheet" type="text/css" href="style1.css"/>
+    <title>Page</title>
+</head>
+<body>
+<p><b><i>New page</i></b></p>
+</hr>
+<img src="0_436ef_ee9fb637_orig.jpg">
+<p>Second line</p>
+<form action="/handler.php" method="post">
+    <label for="email"> Enter your E-mail:</label>
+    <input type="text" id="email" name="email"/>
+    <button type="submit">Confirm</button>
+</form>
+</hr>
+<form action="textarea.php" method="post">
+    <p> Enter your comment:</p>
+    <p><textarea rows="8" cols="50" name="text"></textarea></p>
+    <p><input type="submit" value="Send" style="color: blue; font-size: 25px;"></p>
+</form>
+</hr>
+<form action="input10.php">
+    <p> Choose color:</p>
+    <p><input type="radio" name="color" value="rad1"> White <Br>
+        <input type="radio" name="color" value="rad2"> Red <Br>
+        <input type="radio" name="color" value="rad3"> Green </p>
+</form>
+</hr>
+<form action="input10.php">
+    <p> Choose options:</p>
+    <p><input type="checkbox" name="option" value="check1"> A/C
+        <input type="checkbox" name="option" value="check2"> Automatic transmission
+        <input type="checkbox" name="option" value="check3"> Rear View Camera </p>
+</form>
+</hr>
+<form action="select1.php" method="post">
+    <p> Choose destination:</p>
+    <p><select size="1" destination="destination[]">
+        <option value="North">North</option>
+        <option value="South">South</option>
+        <option value="West">West</option>
+        <option value="East">East</option>
+    </select></p>
+    <p><input type="submit" value="Confirm"></p>
+</form>
+</hr>
+<form action="select1.php" method="post">
+    <p> Choose city:</p>
+    <p><select size="1" multiple city="city[]">
+        <option value="New York">New York</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Miami">Miami</option>
+    </select></p>
+    <p><input type="submit" value="Confirm"></p>
+</form>
+<a href=“http://localhost:63342/academit/Example1%20HTML/Page2.html”>Page2</a>
+</body>
+</html>
